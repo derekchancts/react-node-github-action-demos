@@ -14,8 +14,8 @@ function App() {
 
 
   const getNames = async () => {
-    const response = await axios('http://localhost:5000/names')
-    // const response = await axios('/names')
+    // const response = await axios('http://localhost:5000/names')
+    const response = await axios('/names')
     // console.log({response})
     setUserName(response.data)
   }
