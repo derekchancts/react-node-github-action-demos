@@ -32,7 +32,7 @@ function App() {
   const getNames = async () => {
     // const response = await axios('http://localhost:5000/names')
     // const response = await axios(`http://${ip}:5000/names`)
-    const response = await axios(`http://192.168.1.178:5000/names`)
+    const response = await axios('http://192.168.1.178:5000/names')
     // const response = await axios('/names')
     // console.log({response})
     setUserName(response.data)
