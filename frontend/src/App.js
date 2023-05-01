@@ -7,6 +7,22 @@ function App() {
   const [userName, setUserName] = useState('')
   // console.log({userName})
 
+  // const [ip, setIP] = useState("");
+  // console.log({ip})
+
+
+  // const getData = async () => {
+  //   const res = await axios.get("https://api.ipify.org/?format=json");
+  //   console.log(res.data);
+  //   setIP(res.data.ip);
+  // };
+
+
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+  
+
 
   useEffect(() => {
     getNames();
@@ -15,7 +31,8 @@ function App() {
 
   const getNames = async () => {
     // const response = await axios('http://localhost:5000/names')
-    const response = await axios('http://localhost:5000/names')
+    // const response = await axios(`http://${ip}:5000/names`)
+    const response = await axios(`http://192.168.1.178:5000/names`)
     // const response = await axios('/names')
     // console.log({response})
     setUserName(response.data)
